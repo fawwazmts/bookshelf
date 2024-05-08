@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --grey: #f6f6f6;
+  --yellow: #ecb365;
+  --dark-blue: #064663;
+  --dark-blue-2: #041c32;
+  --light-blue: #086591;
+  --black: #0e0e0e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--grey);
+  color: var(--black);
+}
+
+main {
+  margin-top: 6em;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  position: fixed;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: var(--dark-blue);
+  color: var(--yellow);
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.input_section,
+.book,
+.search_book {
+  margin-bottom: 2em;
+  padding: 2em 2em;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.input_section h2,
+.book h2,
+.book h3 {
+  color: var(--dark-blue);
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.book h3 {
+  font-size: 1.2em;
+}
+
+.search_book {
+  display: flex;
+}
+
+.search_book input {
+  width: 100%;
+}
+
+.search_book button {
+  margin-left: 0.5em;
+}
+
+::placeholder,
+input {
+  color: var(--black);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+::placeholder {
+  color: var(--dark-blue);
+}
+
+.result_caption {
+  text-align: center;
+  background-color: var(--light-blue);
+}
+
+.result_caption p {
+  color: white;
+}
+
+#result h2 {
+  color: white;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#inputBook {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8em;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4em;
+}
+
+input {
+  padding: 8px 8px;
+  border-radius: 4px;
+  border: none;
+  outline: 0.5px solid var(--light-blue);
+  color: var(--black);
+}
+
+.input input:focus,
+.search_book input:focus {
+  border: none;
+  outline: 2px solid var(--dark-blue);
+}
+
+.input input,
+.search_book input {
+  font-weight: 400;
+}
+
+.input_checkbox label {
+  margin-left: 4px;
+}
+
+button {
+  background-color: var(--light-blue);
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--dark-blue-2);
+  color: white;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+}
+
+.book .book_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.book .book_list .book_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 0.2px var(--light-blue) solid;
+  border-bottom: 0.2px var(--light-blue) solid;
+}
+
+.book .book_list .action {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.done,
+.undone,
+.delete {
+  height: 2em;
+  width: 2em;
+}
+
+.done {
+  background-color: #27ae60;
+}
+
+.done:hover {
+  color: white;
+  background-color: #1c7d45;
+}
+
+.undone {
+  background-color: #f2994a;
+}
+
+.undone:hover {
+  color: white;
+  background-color: #ee7911;
+}
+
+.delete {
+  background-color: #eb5757;
+}
+
+.delete:hover {
+  background-color: #e41b1b;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+[hidden] {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .book_container {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .book {
+    flex: 1;
+  }
+}

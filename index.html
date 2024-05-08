@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookself Apps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Bookshelf Apps</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="input_section">
+          <h2>Tambahkan Buku</h2>
+          <form id="inputBook" autocomplete="off">
+            <div class="input">
+              <label for="inputBookTitle">Judul</label>
+              <input
+                id="inputBookTitle"
+                type="text"
+                placeholder="Masukkan judul buku"
+                required
+              />
+            </div>
+            <div class="input">
+              <label for="inputBookAuthor">Penulis</label>
+              <input
+                id="inputBookAuthor"
+                type="text"
+                placeholder="Masukkan nama penulis buku"
+                required
+              />
+            </div>
+            <div class="input">
+              <label for="inputBookYear">Tahun</label>
+              <input
+                id="inputBookYear"
+                type="number"
+                placeholder="Masukkan tahun terbit buku"
+                required
+              />
+            </div>
+            <div class="input_checkbox">
+              <input id="inputBookIsComplete" type="checkbox" />
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+            </div>
+            <button id="bookSubmit" type="submit">Tambahkan buku</button>
+          </form>
+        </section>
+
+        <form id="searchBook" class="search_book" autocomplete="off">
+          <input
+            id="searchBookTitle"
+            type="text"
+            placeholder="Masukkan judul buku"
+          />
+          <button id="closeSubmit" type="submit" hidden>
+            <i class="fa fa-close"></i>
+          </button>
+          <button id="searchSubmit" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+
+        <div id="result">
+          <div class="result_caption book" hidden>
+            <h2>Hasil pencarian <i class="fa fa-search"></i></h2>
+            <p></p>
+          </div>
+          <div class="book_container">
+            <section class="book">
+              <h3>Belum selesai dibaca</h3>
+
+              <div id="incompleteBookList" class="book_list"></div>
+            </section>
+
+            <section class="book">
+              <h3>Selesai dibaca</h3>
+
+              <div id="completeBookList" class="book_list"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container">
+      <p>Fawwaz Muhammad Tsani ©2022</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
